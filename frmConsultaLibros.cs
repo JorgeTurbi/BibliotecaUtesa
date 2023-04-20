@@ -12,47 +12,60 @@ using System.Windows.Forms;
 
 namespace Biblioteca
 {
-    public partial class frmConsultaEstudiante : Form
+    public partial class frmConsultaLibros : Form
     {
-        public frmConsultaEstudiante()
+        public frmConsultaLibros()
         {
             InitializeComponent();
             cargarConsulta();
         }
 
-        private void frmConsultaEstudiante_Load(object sender, EventArgs e)
+        private void frmConsultaLibros_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bibliotecaDataSet.Estudiante' table. You can move, or remove it, as needed.
-       
+            // TODO: This line of code loads data into the 'bibliotecaDataSet1.libro' table. You can move, or remove it, as needed.
 
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmEstudiante registrar = new frmEstudiante();
-            registrar.Show();
-            this.Close();   
+
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            frmLibro frmLibro = new frmLibro();
+            frmLibro.Show();
+        }
+
+        private void cargarConsulta()
+        {
+            SqlDataAdapter adaptador = new SqlDataAdapter("consultaLibro", EliminarRegistros.cadena);
+            adaptador.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            dataGridView1.DataSource = tabla;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
             string mensaje = null;
             try
             {
-                string tabla = "Estudiante";
+                string tabla = "Libro";
                 EliminarRegistros eliminarRegistros = new EliminarRegistros();
-                DataGridViewRow row = dgvEstudiante.CurrentRow;
+                DataGridViewRow row = dataGridView1.CurrentRow;
                 if (row.Cells[0].Value != null || Convert.ToInt16(row.Cells[0].Value) > -1 || row != null)
                 {
                     int codigo = (int)row.Cells[0].Value;
                     eliminarRegistros.Eliminar(codigo, tabla);
                     cargarConsulta();
-                    dgvEstudiante.Refresh();
+                    dataGridView1.Refresh();
                     MessageBox.Show("Registro Eliminado Exitosamente", "Información");
                 }
                 else
@@ -71,17 +84,6 @@ namespace Biblioteca
 
                 MessageBox.Show(mensaje);
             }
-        }
-
-
-        private void cargarConsulta()
-        {
-            SqlDataAdapter adaptador = new SqlDataAdapter("consultaEstudiante", EliminarRegistros.cadena);
-            adaptador.SelectCommand.CommandType = CommandType.StoredProcedure;
-
-            DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
-            dgvEstudiante.DataSource = tabla;
         }
     }
 }

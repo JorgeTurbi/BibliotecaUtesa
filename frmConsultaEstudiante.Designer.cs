@@ -28,99 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgvEstudiante = new System.Windows.Forms.DataGridView();
-            this.bibliotecaDataSet = new Biblioteca.BibliotecaDataSet();
-            this.estudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estudianteTableAdapter = new Biblioteca.BibliotecaDataSetTableAdapters.EstudianteTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matriculaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carreraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailEstudianteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEstudiante
             // 
-            this.dgvEstudiante.AutoGenerateColumns = false;
             this.dgvEstudiante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstudiante.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.matriculaDataGridViewTextBoxColumn,
-            this.carreraDataGridViewTextBoxColumn,
-            this.nombresDataGridViewTextBoxColumn,
-            this.apellidosDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.emailEstudianteDataGridViewTextBoxColumn});
-            this.dgvEstudiante.DataSource = this.estudianteBindingSource;
             this.dgvEstudiante.Location = new System.Drawing.Point(12, 54);
             this.dgvEstudiante.Name = "dgvEstudiante";
             this.dgvEstudiante.Size = new System.Drawing.Size(741, 261);
             this.dgvEstudiante.TabIndex = 0;
-            // 
-            // bibliotecaDataSet
-            // 
-            this.bibliotecaDataSet.DataSetName = "BibliotecaDataSet";
-            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estudianteBindingSource
-            // 
-            this.estudianteBindingSource.DataMember = "Estudiante";
-            this.estudianteBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
-            // estudianteTableAdapter
-            // 
-            this.estudianteTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // matriculaDataGridViewTextBoxColumn
-            // 
-            this.matriculaDataGridViewTextBoxColumn.DataPropertyName = "Matricula";
-            this.matriculaDataGridViewTextBoxColumn.HeaderText = "Matricula";
-            this.matriculaDataGridViewTextBoxColumn.Name = "matriculaDataGridViewTextBoxColumn";
-            // 
-            // carreraDataGridViewTextBoxColumn
-            // 
-            this.carreraDataGridViewTextBoxColumn.DataPropertyName = "Carrera";
-            this.carreraDataGridViewTextBoxColumn.HeaderText = "Carrera";
-            this.carreraDataGridViewTextBoxColumn.Name = "carreraDataGridViewTextBoxColumn";
-            // 
-            // nombresDataGridViewTextBoxColumn
-            // 
-            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
-            // 
-            // apellidosDataGridViewTextBoxColumn
-            // 
-            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            // 
-            // emailEstudianteDataGridViewTextBoxColumn
-            // 
-            this.emailEstudianteDataGridViewTextBoxColumn.DataPropertyName = "Email_Estudiante";
-            this.emailEstudianteDataGridViewTextBoxColumn.HeaderText = "Email_Estudiante";
-            this.emailEstudianteDataGridViewTextBoxColumn.Name = "emailEstudianteDataGridViewTextBoxColumn";
             // 
             // btnRegistrar
             // 
@@ -148,11 +69,22 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(523, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 34);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmConsultaEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 338);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dgvEstudiante);
@@ -162,8 +94,6 @@
             this.Text = "frmConsultaEstudiante";
             this.Load += new System.EventHandler(this.frmConsultaEstudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,17 +101,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvEstudiante;
-        private BibliotecaDataSet bibliotecaDataSet;
-        private System.Windows.Forms.BindingSource estudianteBindingSource;
-        private BibliotecaDataSetTableAdapters.EstudianteTableAdapter estudianteTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matriculaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn carreraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailEstudianteDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button button1;
     }
 }

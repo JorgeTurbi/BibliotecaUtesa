@@ -45,5 +45,24 @@ namespace Biblioteca
             frmConsultaEstudiante frmConsult = new frmConsultaEstudiante();
             frmConsult.Show();
         }
+
+        private void libroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaLibros frm   = new frmConsultaLibros();
+            frm.Show();
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaEmpleados frmConsult= new frmConsultaEmpleados();
+            frmConsult.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Close();
+        }
     }
 }

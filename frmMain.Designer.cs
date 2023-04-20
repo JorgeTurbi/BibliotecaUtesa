@@ -112,12 +112,14 @@
             this.libroToolStripMenuItem.Name = "libroToolStripMenuItem";
             this.libroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.libroToolStripMenuItem.Text = "Libro";
+            this.libroToolStripMenuItem.Click += new System.EventHandler(this.libroToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -139,26 +141,27 @@
             // sumadoraToolStripMenuItem
             // 
             this.sumadoraToolStripMenuItem.Name = "sumadoraToolStripMenuItem";
-            this.sumadoraToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.sumadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sumadoraToolStripMenuItem.Text = "Sumadora";
             // 
             // casaDeCambioToolStripMenuItem
             // 
             this.casaDeCambioToolStripMenuItem.Name = "casaDeCambioToolStripMenuItem";
-            this.casaDeCambioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.casaDeCambioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.casaDeCambioToolStripMenuItem.Text = "Casa de Cambio";
             // 
             // nominaToolStripMenuItem
             // 
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
-            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nominaToolStripMenuItem.Text = "Nomina";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // frmMain
             // 

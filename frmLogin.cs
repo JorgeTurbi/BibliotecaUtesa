@@ -58,7 +58,7 @@ namespace Biblioteca
             {
                 Login login = new Login();
 
-                if (string.IsNullOrEmpty(txtusuario.Text) && string.IsNullOrEmpty(txtclave.Text))
+                if (string.IsNullOrEmpty(txtusuario.Text.ToLower()) && string.IsNullOrEmpty(txtclave.Text))
                 {
                     MessageBox.Show("Introduzca un usuario y contraseña validos", "usuario invalido");
                     limpiarControlesLogin();
@@ -79,6 +79,11 @@ namespace Biblioteca
 
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
